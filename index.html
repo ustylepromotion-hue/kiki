@@ -3,265 +3,422 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>中村浩一郎 | Choice</title>
-  <meta
-    name="description"
-    content="国家資格キャリアコンサルタント・中村浩一郎。14年間で10,000人以上のキャリア相談。社会人の思い込みを外し、本来の才能を使って働くことが当たり前の社会を作る。"
-  >
+  <title>Reuse Co. | ブランド品・貴金属・アクセサリー買取</title>
+  <meta name="description" content="ブランドバッグ・貴金属・時計・アクセサリーの高価買取。14年以上の経験と専門知識による適正価格での査定。査定無料・即日対応。">
+  <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="shell site-header__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__role">キャリアコンサルタント</span>
-        <span class="brand__name">Choice</span>
+
+  <!-- =========================================
+       1. HEADER
+       ========================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+
+      <a href="#" class="logo" aria-label="Reuse Co. トップへ">
+        <span class="logo-en">Reuse Co.</span>
+        <span class="logo-ja">リユース専門店</span>
       </a>
-      <nav class="site-nav" aria-label="主要メニュー">
-        <a href="#vision">Vision</a>
-        <a href="#services">Services</a>
-        <a href="#media">Media</a>
-        <a href="#profile">Profile</a>
-        <a href="#contact" class="site-nav__cta">Contact</a>
+
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <ul class="nav-links">
+          <li><a href="#items">取扱品目</a></li>
+          <li><a href="price.html">買取価格</a></li>
+          <li><a href="#flow">査定の流れ</a></li>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-gold header-cta">無料査定</a>
       </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="shell hero__grid">
-        <div class="hero__copy reveal">
-          <p class="eyebrow">Choice</p>
-          <h1>
-            選択したときから、
-            <span>人生が動き出す。</span>
-          </h1>
-          <p class="hero__lead">
-            社会人の思い込みを外し、本来の才能を使って働くことが当たり前の社会を作る。
-            あなたの可能性はそんなもんじゃない——私がいつもお客様に伝えていることです。
-          </p>
-          <div class="hero__actions">
-            <a href="#contact" class="button button--primary">お問い合わせ</a>
-            <a href="#services" class="button button--ghost">サービスを見る</a>
-          </div>
-          <dl class="hero-metrics">
-            <div>
-              <dt>Career</dt>
-              <dd>14年の実績</dd>
-            </div>
-            <div>
-              <dt>Clients</dt>
-              <dd>10,000人以上</dd>
-            </div>
-            <div>
-              <dt>Book</dt>
-              <dd>2026年5月出版</dd>
-            </div>
-          </dl>
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルナビゲーション">
+    <a href="#items"        onclick="closeMobileNav()">取扱品目</a>
+    <a href="price.html"   onclick="closeMobileNav()">買取価格</a>
+    <a href="#flow"        onclick="closeMobileNav()">査定の流れ</a>
+    <a href="#about"       onclick="closeMobileNav()">会社概要</a>
+    <a href="contact.html" onclick="closeMobileNav()">お問い合わせ</a>
+    <a href="contact.html" class="btn btn-gold" onclick="closeMobileNav()">無料査定</a>
+  </nav>
+
+
+  <main>
+    <!-- =========================================
+         2. HERO
+         ========================================= -->
+    <section class="hero" id="hero" aria-label="メインビジュアル">
+      <div class="hero-bg" role="img" aria-label="Photo placeholder — ブランド品のイメージ写真（後で差し替え）"></div>
+
+      <div class="container hero-content">
+        <p class="hero-eyebrow reveal">Premium Reuse</p>
+
+        <h1 class="hero-title reveal reveal-delay-1">
+          上質なものは、<br>次の持ち主へ。
+        </h1>
+
+        <p class="hero-lead reveal reveal-delay-2">
+          ブランド品・貴金属・アクセサリーの買取・販売を通じて、<br>
+          価値あるものの循環をつくります。
+        </p>
+
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#contact" class="btn btn-gold btn-lg">無料査定はこちら</a>
+          <a href="#items"   class="btn btn-outline btn-lg">取扱品目を見る</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         3. ITEMS BAND
+         ========================================= -->
+    <section class="items-section" id="items">
+      <div class="container">
+
+        <div class="items-header reveal">
+          <span class="section-label">Category</span>
+          <h2 class="section-title">取扱品目</h2>
         </div>
 
-        <div class="hero__visual reveal reveal--delay">
-          <div class="hero-card">
-            <div class="hero-card__portrait">
-              <div class="hero-card__portrait-frame">
-                <span>Portrait Photo</span>
+        <div class="items-grid">
+
+          <!-- ブランドバッグ -->
+          <div class="item-card reveal reveal-delay-1">
+            <div class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+            </div>
+            <span class="item-name">ブランドバッグ</span>
+          </div>
+
+          <!-- 貴金属・ジュエリー -->
+          <div class="item-card reveal reveal-delay-2">
+            <div class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <span class="item-name">貴金属・ジュエリー</span>
+          </div>
+
+          <!-- 時計 -->
+          <div class="item-card reveal reveal-delay-3">
+            <div class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+                <line x1="9" y1="2" x2="15" y2="2"/>
+                <line x1="9" y1="22" x2="15" y2="22"/>
+              </svg>
+            </div>
+            <span class="item-name">時計</span>
+          </div>
+
+          <!-- アクセサリー -->
+          <div class="item-card reveal reveal-delay-1">
+            <div class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="3"/>
+                <circle cx="12" cy="5"  r="2"/>
+                <circle cx="12" cy="19" r="2"/>
+                <circle cx="5"  cy="12" r="2"/>
+                <circle cx="19" cy="12" r="2"/>
+                <line x1="12" y1="7" x2="12" y2="9"/>
+                <line x1="12" y1="15" x2="12" y2="17"/>
+                <line x1="7" y1="12" x2="9" y2="12"/>
+                <line x1="15" y1="12" x2="17" y2="12"/>
+              </svg>
+            </div>
+            <span class="item-name">アクセサリー</span>
+          </div>
+
+          <!-- ブランド衣類 -->
+          <div class="item-card reveal reveal-delay-2">
+            <div class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z"/>
+              </svg>
+            </div>
+            <span class="item-name">ブランド衣類</span>
+          </div>
+
+          <!-- その他ブランド品 -->
+          <div class="item-card reveal reveal-delay-3">
+            <div class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+                <line x1="12" y1="12" x2="12" y2="16"/>
+                <line x1="10" y1="14" x2="14" y2="14"/>
+              </svg>
+            </div>
+            <span class="item-name">その他ブランド品</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         4. REASONS
+         ========================================= -->
+    <section class="reasons-section" id="reasons">
+      <div class="container">
+
+        <div class="reasons-header reveal">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">選ばれる理由</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="reasons-grid">
+
+          <div class="reason-card reveal reveal-delay-1">
+            <div class="reason-number">01</div>
+            <h3 class="reason-title">確かな査定力</h3>
+            <p class="reason-text">
+              14年以上の経験と専門知識による適正価格での査定。市場価値を正確に把握した上で、お客様にとって最適な買取価格をご提示します。
+            </p>
+          </div>
+
+          <div class="reason-card reveal reveal-delay-2">
+            <div class="reason-number">02</div>
+            <h3 class="reason-title">スピード対応</h3>
+            <p class="reason-text">
+              査定から入金まで最短即日対応。お客様のご都合に合わせた柔軟なスケジューリングで、スムーズな取引をサポートします。
+            </p>
+          </div>
+
+          <div class="reason-card reveal reveal-delay-3">
+            <div class="reason-number">03</div>
+            <h3 class="reason-title">安心の買取</h3>
+            <p class="reason-text">
+              個人情報の厳重な管理と丁寧な対応で、安心してご利用いただけます。初めてのお客様もお気軽にご相談ください。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         5. PRICE PREVIEW
+         ========================================= -->
+    <section class="price-section" id="price">
+      <div class="container">
+
+        <div class="price-header reveal">
+          <span class="section-label">Buy Price</span>
+          <h2 class="section-title">買取参考価格</h2>
+          <p class="price-note">※価格は市場相場により変動します。最新の買取価格はお気軽にお問い合わせください。</p>
+        </div>
+
+        <div class="price-tables reveal">
+
+          <!-- 貴金属 -->
+          <div class="price-table-wrap">
+            <h3>Precious Metals — 貴金属</h3>
+            <table class="price-table">
+              <thead>
+                <tr><th>品目</th><th>品位</th><th>参考買取価格</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>金（ゴールド）</td><td>K24</td><td class="price-val">¥8,500〜 / g</td></tr>
+                <tr><td>金（ゴールド）</td><td>K18</td><td class="price-val">¥6,500〜 / g</td></tr>
+                <tr><td>金（ゴールド）</td><td>K14</td><td class="price-val">¥5,000〜 / g</td></tr>
+                <tr><td>プラチナ</td><td>Pt950</td><td class="price-val">¥4,800〜 / g</td></tr>
+                <tr><td>プラチナ</td><td>Pt900</td><td class="price-val">¥4,600〜 / g</td></tr>
+                <tr><td>シルバー</td><td>SV925</td><td class="price-val">¥90〜 / g</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ブランド品 -->
+          <div class="price-table-wrap">
+            <h3>Brand Items — ブランド品</h3>
+            <table class="price-table">
+              <thead>
+                <tr><th>ブランド</th><th>カテゴリ</th><th>参考買取価格帯</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>LOUIS VUITTON</td><td>バッグ</td><td class="price-val">¥5,000〜300,000</td></tr>
+                <tr><td>CHANEL</td><td>バッグ</td><td class="price-val">¥30,000〜800,000</td></tr>
+                <tr><td>GUCCI</td><td>バッグ</td><td class="price-val">¥5,000〜200,000</td></tr>
+                <tr><td>ROLEX</td><td>時計</td><td class="price-val">¥100,000〜3,000,000</td></tr>
+                <tr><td>CARTIER</td><td>ジュエリー</td><td class="price-val">¥10,000〜500,000</td></tr>
+                <tr><td>HERMÈS</td><td>バッグ</td><td class="price-val">¥50,000〜2,000,000</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="price-cta reveal">
+          <a href="price.html" class="btn btn-outline">買取価格一覧をすべて見る</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         6. FLOW
+         ========================================= -->
+    <section class="flow-section" id="flow">
+      <div class="container">
+
+        <div class="flow-header reveal">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title">査定の流れ</h2>
+        </div>
+
+        <div class="flow-steps">
+
+          <div class="flow-step reveal reveal-delay-1">
+            <div class="step-number">
+              <span class="step-no">Step</span>
+              <span class="step-num">1</span>
+            </div>
+            <h3 class="step-title">お問い合わせ</h3>
+            <p class="step-desc">お電話・メール・フォームにてお気軽にご連絡ください。査定は無料です。</p>
+          </div>
+
+          <div class="flow-step reveal reveal-delay-2">
+            <div class="step-number">
+              <span class="step-no">Step</span>
+              <span class="step-num">2</span>
+            </div>
+            <h3 class="step-title">お品物のお持込・発送</h3>
+            <p class="step-desc">店頭へのお持込または宅配買取にてお品物をお送りください。</p>
+          </div>
+
+          <div class="flow-step reveal reveal-delay-3">
+            <div class="step-number">
+              <span class="step-no">Step</span>
+              <span class="step-num">3</span>
+            </div>
+            <h3 class="step-title">査定・ご提示</h3>
+            <p class="step-desc">専門スタッフが丁寧に査定し、買取価格をご提示いたします。</p>
+          </div>
+
+          <div class="flow-step reveal reveal-delay-4">
+            <div class="step-number">
+              <span class="step-no">Step</span>
+              <span class="step-num">4</span>
+            </div>
+            <h3 class="step-title">ご承認・お支払い</h3>
+            <p class="step-desc">ご納得いただけましたら、その場で現金またはお振込みにてお支払いします。</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         6. CONTACT BANNER
+         ========================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-banner reveal">
+          <div class="contact-body">
+            <span class="section-label">Contact</span>
+            <h2 class="contact-title">まずはお気軽に<br>ご相談ください。</h2>
+            <p class="contact-lead">査定は無料です。お気軽にお問い合わせください。</p>
+
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <span class="info-label">Business Hours</span>
+                <span class="info-value">営業時間　10:00〜18:00</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="info-label">Regular Holiday</span>
+                <span class="info-value">定休日　日曜・祝日</span>
               </div>
             </div>
-            <div class="hero-card__body">
-              <p class="hero-card__label">国家資格キャリアコンサルタント / Author</p>
-              <h2>あなたの可能性はそんなもんじゃない。</h2>
-              <p>
-                何の制約もないとしたら、やりたいことは何ですか。
-                あなたの才能を100％使ったら、どんなことができますか。
-              </p>
-            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="#contact-form" class="btn btn-gold btn-lg">お問い合わせフォームへ</a>
           </div>
         </div>
+
       </div>
     </section>
 
-    <section class="quote-band reveal">
-      <div class="shell quote-band__inner">
-        <p>思い込みを外す</p>
-        <p>才能を使う</p>
-        <p>キャリアの主導権</p>
-        <p>直感・論理・感情</p>
-        <p>喜びに満ちた世界へ</p>
-      </div>
-    </section>
-
-    <section class="section" id="vision">
-      <div class="shell">
-        <div class="section-head reveal">
-          <p class="eyebrow">Vision & Mission</p>
-          <h2>働くことが楽しいのは当たり前。そんな世界を作るために活動しています。</h2>
-          <p>
-            自分の気持ちを大切にして働く社会人が一人ずつ増えていけば、
-            いつか才能を使って働くことの方が当たり前の社会になる。なぜなら、環境が私たちを作っているからです。
-          </p>
-        </div>
-
-        <div class="vision-grid">
-          <article class="vision-card reveal">
-            <span class="vision-card__label">Vision</span>
-            <h3>社会人の思い込みを外し、本来の才能を使って働くことが当たり前の社会を作る。</h3>
-            <p>
-              私たちは環境によって作られています。家庭や学校で身につけてきた観念や職場の常識によって
-              自分自身のことを理解しています。でも、環境を変えることで人は変わる。
-              才能を使う人が一人増えれば、周りも変わっていきます。
-            </p>
-          </article>
-
-          <article class="vision-card reveal reveal--delay">
-            <span class="vision-card__label">Mission</span>
-            <h3>あなたの才能を使って、やりたいことで誰かの役に立つ。</h3>
-            <p>
-              それは、あなたがキャリアの主導権を自分の手に取り戻すということです。
-              現実はそんなに甘くない——真面目に頑張ってきた人ほどそう感じるかもしれません。
-              でも、自分の気持ちを大切にして働くことは、確かに可能です。
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="services">
-      <div class="shell">
-        <div class="section-head reveal">
-          <p class="eyebrow">Services</p>
-          <h2>３つの角度からキャリアを一段上に引き上げるサポート。</h2>
-          <p>
-            直感・論理・感情の3つのアプローチで、あなた本来の力を引き出し、
-            キャリアの主導権を取り戻します。
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <span class="service-card__no">直感</span>
-            <h3>本当の望みを引き出し、一段上の目的地を設定する。</h3>
-            <p>自分が望んでいることは意外とわからないものです。安心安全な雰囲気の中で、普段の自分では気づかない本当の望みを引き出し、現状の枠を超えた目的地を設定します。</p>
-          </article>
-          <article class="service-card reveal reveal--delay">
-            <span class="service-card__no">論理</span>
-            <h3>目的地に至る道筋を明確にする。</h3>
-            <p>悩んでいるとき、頭の中は「モヤモヤ」や「ごちゃごちゃ」でいっぱいです。あなたの頭の中にある事象を一つずつ紐解き、本当の望みを手に入れるための手段と計画を一緒に考えます。</p>
-          </article>
-          <article class="service-card reveal reveal--delay-2">
-            <span class="service-card__no">感情</span>
-            <h3>目的地まで運ぶエネルギーを生み出す。</h3>
-            <p>喜び、悔しさ、悲しみといった感情は目的地に進むためのエネルギーです。普段抑えている心を解放することによって、本来持っている力を引き出します。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="media">
-      <div class="shell media-layout">
-        <div class="section-head reveal">
-          <p class="eyebrow">Media & Achievements</p>
-          <h2>14年間で積み上げた、10,000人以上との対話。</h2>
-          <p>
-            転職エージェントとしてのキャリアから独立まで、
-            実績と実務経験がChoiceの活動を支えています。
-          </p>
-        </div>
-
-        <div class="media-board reveal reveal--delay">
-          <article class="media-item">
-            <span class="media-item__meta">2026年5月 / Book</span>
-            <h3>きずな出版より出版予定</h3>
-            <p>社会人の思い込みを外し、才能を使って働くことをテーマにした初の著書。きずな出版より2026年5月発売予定。</p>
-          </article>
-          <article class="media-item">
-            <span class="media-item__meta">Award</span>
-            <h3>求職者が選ぶ満足度 No.1 転職エージェント</h3>
-            <p>ビズリーチ主催のヘッドハンターアワードにて表彰。社内トップセールスを複数回獲得。</p>
-          </article>
-          <article class="media-item">
-            <span class="media-item__meta">Consulting</span>
-            <h3>14年間・10,000人以上のキャリア相談</h3>
-            <p>（株）ムービン・ストラテジック・キャリアでの転職エージェント経験から、約1,000名の転職支援を実施。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="profile">
-      <div class="shell profile-layout">
-        <div class="profile-card reveal">
-          <div class="profile-card__image">
-            <span>中村浩一郎</span>
-          </div>
-          <div class="profile-card__body">
-            <p class="eyebrow">Profile</p>
-            <h2>中村浩一郎</h2>
-            <p>
-              国家資格キャリアコンサルタント。プロティアンキャリア協会認定ファシリテーター。
-              一橋大学社会学部で「キャリア論」を専攻後、営業・人事・人事コンサルタントの経験を経て
-              （株）ムービン・ストラテジック・キャリアで転職エージェントを始める。
-              14年間で10,000人以上のキャリア相談に乗り、約1,000名の転職支援を実施。
-              現在は独立し、キャリアコーチとしてコーチング、コミュニティ運営、セミナー等を通じて、
-              自分の才能を活かして活躍する社会人を支援している。
-            </p>
-            <ul class="profile-list">
-              <li>国家資格キャリアコンサルタント</li>
-              <li>プロティアンキャリア協会認定ファシリテーター</li>
-              <li>きずな出版より 2026年5月出版予定</li>
-            </ul>
-            <a href="./story.html" class="text-link">パーソナルヒストリーを見る</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--contact" id="contact">
-      <div class="shell contact-layout reveal">
-        <div class="contact-copy">
-          <p class="eyebrow eyebrow--light">Contact</p>
-          <h2>まず、話すことから始めましょう。</h2>
-          <p>
-            ご相談・ご依頼はこちらよりお問い合わせください。
-            内容を確認のうえ、担当よりご連絡いたします。
-          </p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-card__row">
-            <span>個人向けセッション</span>
-            <strong>キャリア相談 / コーチング</strong>
-          </div>
-          <div class="contact-card__row">
-            <span>法人向け研修</span>
-            <strong>組織開発 / 人材育成</strong>
-          </div>
-          <div class="contact-card__row">
-            <span>講演・登壇</span>
-            <strong>セミナー / ワークショップ</strong>
-          </div>
-          <a href="#" class="button button--accent">お問い合わせフォームへ</a>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell site-footer__inner">
-      <div>
-        <p class="site-footer__name">中村浩一郎 / Choice</p>
-        <p class="site-footer__copy">© 2026 Koichiro Nakamura. All rights reserved.</p>
+
+  <!-- =========================================
+       7. FOOTER
+       ========================================= -->
+  <footer class="site-footer" id="about" aria-label="フッター">
+    <div class="container">
+
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo" aria-label="Reuse Co. トップへ">
+            <span class="logo-en">Reuse Co.</span>
+            <span class="logo-ja">リユース専門店</span>
+          </a>
+          <p class="footer-desc">
+            ブランド品・貴金属・アクセサリーの買取・販売を通じて、価値あるものの循環をつくる専門店です。
+          </p>
+        </div>
+
+        <div class="footer-info">
+          <p><strong>所在地</strong>　〒000-0000 ○○県○○市○○町 0-0-0</p>
+          <p><strong>電話番号</strong>　000-0000-0000</p>
+          <p><strong>メール</strong>　info@reuse-co.example.com</p>
+          <p><strong>営業時間</strong>　10:00〜18:00（日曜・祝日定休）</p>
+        </div>
+
+        <nav class="footer-nav-group" aria-label="フッターナビゲーション">
+          <span class="footer-nav-title">Menu</span>
+          <a href="#items">取扱品目</a>
+          <a href="price.html">買取価格</a>
+          <a href="#flow">査定の流れ</a>
+          <a href="contact.html">お問い合わせ</a>
+          <a href="#">プライバシーポリシー</a>
+        </nav>
+
       </div>
-      <div class="site-footer__links">
-        <a href="#vision">Vision</a>
-        <a href="#services">Services</a>
-        <a href="#profile">Profile</a>
-        <a href="#contact">Contact</a>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2025 Reuse Co. All Rights Reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">特定商取引法に基づく表記</a>
+        </div>
       </div>
+
     </div>
   </footer>
 
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
